@@ -21,19 +21,6 @@ async def on_ready():
     print(e)
 
 
-@bot.tree.command(name="hello")
-async def hello(interaction: discord.Interaction):
-  await interaction.response.send_message(f"HELLO {interaction.user} this is a prova")
-
-
-
-
-
-@bot.tree.command(name="say")
-@app_commands.describe(thing_to_say="What should i say?")
-async def say(interaction: discord.Interaction, thing_to_say: str):
-  await interaction.response.send_message(f"Hello {interaction.user} you said {thing_to_say}")
-
 @bot.tree.command(name="ign")
 @app_commands.describe(ign="What is your IGN?")
 async def ign(interaction: discord.Interaction, ign:str):
